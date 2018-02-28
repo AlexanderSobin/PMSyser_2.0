@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class MainApp extends Application {
 
@@ -17,7 +18,8 @@ public class MainApp extends Application {
         String fxmlFile = "/fxml/gui.fxml";
         FXMLLoader loader = new FXMLLoader();
         Parent root = (Parent) loader.load(getClass().getResourceAsStream(fxmlFile));
-        stage.setTitle("PMSyser 2.0");
+        stage.initStyle(StageStyle.UNDECORATED);
+        //stage.setTitle("PMSyser 2.0");
         stage.setScene(new Scene(root));
         stage.show();
     }
